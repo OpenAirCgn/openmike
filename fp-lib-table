@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ICS-43434)(type Legacy)(uri ${KIPRJMOD}/ICS-43434.mod)(options "")(descr ""))
+)
