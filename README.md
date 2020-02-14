@@ -1,1 +1,1 @@
-#Breakout for ICS43434 MEMS i2s Microphone
+# Breakout for ICS43434 MEMS i2s Microphone
