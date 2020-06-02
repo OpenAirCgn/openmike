@@ -1,0 +1,262 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "OpenMike im69d130 Breakout"
+Date "2020-06-01"
+Rev ""
+Comp "Press Every Key "
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Audio:IM69D130 MK1
+U 1 1 5ED56CAB
+P 5050 3150
+F 0 "MK1" H 4721 3196 50  0000 R CNN
+F 1 "IM69D130" H 4721 3105 50  0000 R CNN
+F 2 "Sensor_Audio:Infineon_PG-LLGA-5-1" H 5750 2850 50  0001 C CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e" H 5050 3150 50  0001 C CNN
+	1    5050 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5ED57238
+P 5050 3750
+F 0 "#PWR0101" H 5050 3500 50  0001 C CNN
+F 1 "GND" H 5055 3577 50  0000 C CNN
+F 2 "" H 5050 3750 50  0001 C CNN
+F 3 "" H 5050 3750 50  0001 C CNN
+	1    5050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0102
+U 1 1 5ED57432
+P 5050 2500
+F 0 "#PWR0102" H 5050 2350 50  0001 C CNN
+F 1 "VDD" H 5067 2673 50  0000 C CNN
+F 2 "" H 5050 2500 50  0001 C CNN
+F 3 "" H 5050 2500 50  0001 C CNN
+	1    5050 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2850 5050 2500
+Wire Wire Line
+	5050 3450 5050 3750
+Text GLabel 6000 3250 2    50   Output ~ 0
+Data
+Text GLabel 6000 3150 2    50   Input ~ 0
+Clock
+Wire Wire Line
+	6000 3150 5450 3150
+Text GLabel 5700 2800 1    50   Input ~ 0
+Select
+Wire Wire Line
+	5700 2800 5700 3050
+Wire Wire Line
+	5700 3050 5450 3050
+$Comp
+L Device:R R1
+U 1 1 5ED582BF
+P 5700 3250
+F 0 "R1" V 5600 3250 50  0000 C CNN
+F 1 "100" V 5500 3250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5630 3250 50  0001 C CNN
+F 3 "~" H 5700 3250 50  0001 C CNN
+	1    5700 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5550 3250 5450 3250
+Wire Wire Line
+	5850 3250 6000 3250
+$Comp
+L Device:C C1
+U 1 1 5ED5AA81
+P 3850 3150
+F 0 "C1" H 3965 3196 50  0000 L CNN
+F 1 "100nF" H 3965 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3888 3000 50  0001 C CNN
+F 3 "~" H 3850 3150 50  0001 C CNN
+	1    3850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5ED5AD31
+P 3850 3800
+F 0 "#PWR0103" H 3850 3550 50  0001 C CNN
+F 1 "GND" H 3855 3627 50  0000 C CNN
+F 2 "" H 3850 3800 50  0001 C CNN
+F 3 "" H 3850 3800 50  0001 C CNN
+	1    3850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3800 3850 3300
+$Comp
+L power:VDD #PWR0104
+U 1 1 5ED5B136
+P 3850 2500
+F 0 "#PWR0104" H 3850 2350 50  0001 C CNN
+F 1 "VDD" H 3867 2673 50  0000 C CNN
+F 2 "" H 3850 2500 50  0001 C CNN
+F 3 "" H 3850 2500 50  0001 C CNN
+	1    3850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2500 3850 3000
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5ED5B986
+P 7900 2600
+F 0 "TP1" V 7854 2788 50  0000 L CNN
+F 1 "VDD" V 7945 2788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8100 2600 50  0001 C CNN
+F 3 "~" H 8100 2600 50  0001 C CNN
+	1    7900 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5ED5BE89
+P 7900 2850
+F 0 "TP2" V 7854 3038 50  0000 L CNN
+F 1 "Select" V 7945 3038 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8100 2850 50  0001 C CNN
+F 3 "~" H 8100 2850 50  0001 C CNN
+	1    7900 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5ED5C2FD
+P 7900 3100
+F 0 "TP3" V 7854 3288 50  0000 L CNN
+F 1 "Clock" V 7945 3288 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8100 3100 50  0001 C CNN
+F 3 "~" H 8100 3100 50  0001 C CNN
+	1    7900 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5ED5C4AD
+P 7900 3350
+F 0 "TP4" V 7854 3538 50  0000 L CNN
+F 1 "Data" V 7945 3538 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8100 3350 50  0001 C CNN
+F 3 "~" H 8100 3350 50  0001 C CNN
+	1    7900 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5ED5E30A
+P 7900 3600
+F 0 "TP5" V 7854 3788 50  0000 L CNN
+F 1 "GND" V 7945 3788 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8100 3600 50  0001 C CNN
+F 3 "~" H 8100 3600 50  0001 C CNN
+	1    7900 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5ED5EDA0
+P 7700 3750
+F 0 "#PWR0105" H 7700 3500 50  0001 C CNN
+F 1 "GND" H 7705 3577 50  0000 C CNN
+F 2 "" H 7700 3750 50  0001 C CNN
+F 3 "" H 7700 3750 50  0001 C CNN
+	1    7700 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3750 7700 3600
+Wire Wire Line
+	7700 3600 7900 3600
+Text GLabel 7650 3350 0    50   Output ~ 0
+Data
+Wire Wire Line
+	7650 3350 7900 3350
+Text GLabel 7650 3100 0    50   Input ~ 0
+Clock
+Wire Wire Line
+	7650 3100 7900 3100
+Text GLabel 7650 2850 0    50   Input ~ 0
+Select
+Wire Wire Line
+	7650 2850 7900 2850
+$Comp
+L power:VDD #PWR0106
+U 1 1 5ED5FB8E
+P 7700 2400
+F 0 "#PWR0106" H 7700 2250 50  0001 C CNN
+F 1 "VDD" H 7717 2573 50  0000 C CNN
+F 2 "" H 7700 2400 50  0001 C CNN
+F 3 "" H 7700 2400 50  0001 C CNN
+	1    7700 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 2400 7700 2600
+Wire Wire Line
+	7700 2600 7900 2600
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5ED60B9E
+P 3850 5100
+F 0 "#FLG0101" H 3850 5175 50  0001 C CNN
+F 1 "PWR_FLAG" H 3850 5273 50  0000 C CNN
+F 2 "" H 3850 5100 50  0001 C CNN
+F 3 "~" H 3850 5100 50  0001 C CNN
+	1    3850 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5ED60C89
+P 4250 5300
+F 0 "#FLG0102" H 4250 5375 50  0001 C CNN
+F 1 "PWR_FLAG" H 4250 5473 50  0000 C CNN
+F 2 "" H 4250 5300 50  0001 C CNN
+F 3 "~" H 4250 5300 50  0001 C CNN
+	1    4250 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR0107
+U 1 1 5ED6117B
+P 4250 5100
+F 0 "#PWR0107" H 4250 4950 50  0001 C CNN
+F 1 "VDD" H 4267 5273 50  0000 C CNN
+F 2 "" H 4250 5100 50  0001 C CNN
+F 3 "" H 4250 5100 50  0001 C CNN
+	1    4250 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5100 4250 5300
+$Comp
+L power:GND #PWR0108
+U 1 1 5ED6244A
+P 3850 5300
+F 0 "#PWR0108" H 3850 5050 50  0001 C CNN
+F 1 "GND" H 3855 5127 50  0000 C CNN
+F 2 "" H 3850 5300 50  0001 C CNN
+F 3 "" H 3850 5300 50  0001 C CNN
+	1    3850 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5300 3850 5100
+$EndSCHEMATC
